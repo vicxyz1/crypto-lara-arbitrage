@@ -15,29 +15,37 @@ Implements basic arbitrage algorithm between crypto exchanges platforms. Current
 
 ## INSTALATION
 
+Download or clone the repository:
+
+    git clone https://github.com/vicxyz1/crypto-lara-arbitrage.git
+
 Install dependencies: 
     
+    cd crypto-lara-arbitrage/
     composer install
 
-Configure settings:  
+Simplify _artisan_ commands execution by giving the rights:
 
-    cp .env.example .env
+    chmod a+x artisan 
 
 Create initial wallets funds
 
     cd config
     cp wallets.json.example wallets.json
 
+Create the MySQL database and configure settings in the .env file:  
 
-Create database, run migrations and seeders:
+    cp .env.example .env
+
+Run migrations and seeders:
 
     ./artisan migrate
     ./artisan db:seed
     
     ./artisan key:generate 
 
-Install cron:
 
+Install the cron:
 
     * * * * * php /path/to/project/artisan schedule:run >> /dev/null 2>&1
 
@@ -46,9 +54,32 @@ Install cron:
 
 
 
-## Usage
+## Basic Usage
 
-       
+Run the arbitrage bot:
+
+    ./artisan arbitrage:run
+
+  
+Display arbitrage statistics:
+
+    ./artisan arbitrage:stats 
+
+Wallet management:
+
+   - Display all the wallets with a positive balance and the total value in BTC/USD
+    
+    ./artisan wallet:portfolio
+    
+   - Display summary of transactions and P&L report
+   
+    ./artisan wallet:transactions
+   
+   - Balance funds between platforms
+   
+    ./artisan wallet:balance
+    
+
 ## Contributing
 
 Feel free to contribute, but please discuss the feature in a issue or contact me before a PR 
