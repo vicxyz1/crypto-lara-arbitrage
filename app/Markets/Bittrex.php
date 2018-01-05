@@ -31,7 +31,7 @@ class Bittrex extends Market
     }
 
     /**
-     * get supported Currencies sau wallets ??
+     * get supported Currencies
      * @return array|mixed
      */
     public function getCurrencies($full = false)
@@ -41,6 +41,9 @@ class Bittrex extends Market
             return array_keys($this->coins);
         }
         $currencies = $this->request('getcurrencies');
+
+        if (!$currencies)
+            return false;
 
         foreach ($currencies as $currency) {
 
@@ -54,23 +57,6 @@ class Bittrex extends Market
         return array_keys($this->coins);
 
 
-//        if (!is_null($this->coins)) {
-//            return $this->coins;
-//        }
-//        $currencies = $this->request('getcurrencies');
-//
-//        if (!$currencies) {
-//            return [];
-//        }
-//
-//        $coins = collect($currencies);
-//
-//        $this->coins = $coins->filter(function ($value){
-//            return $value->IsActive;
-//        }) ;
-//
-//        dd($this->coins->pluck('Currency')->toArray());
-//        return $full ? $this->coins:$this->coins->pluck('Currency')->toArray();
     }
 
 
