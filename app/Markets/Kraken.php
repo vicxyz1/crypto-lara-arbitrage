@@ -51,6 +51,8 @@ class Kraken extends Market
         ]);
 
 
+        if (!$orderbook) return false;
+
         //!FIXE: o metoda cu foreach ar fi...
         $orderbook = each($orderbook);
         $orderbook = $orderbook['value'];
