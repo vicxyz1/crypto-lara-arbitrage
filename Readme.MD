@@ -9,9 +9,12 @@ Implements basic arbitrage algorithm between crypto exchanges platforms. Current
 
 
 
+
 ## Disclaimer
    
-   This software is for educational purposes only. __Do not risk money which you are afraid to lose.__ USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+   This software is for educational purposes only, _right now it's just a simulator, meaning no real money involved_. 
+   
+  __Anyway, as a general rule if you decide to follow the opportunities, DO NOT risk money which you are afraid to lose.__ USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
 
 ## INSTALATION
 
@@ -45,7 +48,7 @@ Run migrations and seeders:
     ./artisan key:generate 
 
 
-Install the cron:
+Optionally, install the cron to run the arbitrage bot in the background:
 
     * * * * * php /path/to/project/artisan schedule:run >> /dev/null 2>&1
 
