@@ -2,7 +2,8 @@
 Crypto Lara Arbitrage
 --- 
 
-Implements basic arbitrage algorithm between crypto exchanges platforms. Currently supported platforms: Bittrex, Poloniex, Bleutrade and Kraken.
+Implements basic arbitrage algorithm between crypto exchange markets,  currently supported : Bittrex, Poloniex, Bleutrade and Kraken.
+
 
 
 ## Features
@@ -42,7 +43,7 @@ Simplify _artisan_ commands execution by giving the rights:
 
     chmod a+x artisan 
 
-Create initial wallets funds
+Create initial wallets funds:
 
     cd config
     cp wallets.json.example wallets.json
@@ -93,7 +94,7 @@ __Wallet management__
    
     ./artisan wallet:balance
     
-Each command supports additional option, please check them withȘ   
+Each command supports additional options, please check them with:   
     
     ./artisan help {command}
 
