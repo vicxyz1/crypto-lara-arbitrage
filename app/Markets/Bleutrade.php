@@ -108,6 +108,9 @@ class Bleutrade extends Market
         }
         $currencies = $this->request('getcurrencies');
 
+        if (!$currencies)
+            return false;
+
         foreach ($currencies as $currency) {
 
             if (!$currency->IsActive)
