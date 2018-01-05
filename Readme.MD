@@ -7,7 +7,15 @@ Implements basic arbitrage algorithm between crypto exchanges platforms. Current
 
 ## Features
 
-
+* support for multiple crypto exchange platforms
+* check the ask / bid size in orderbook  to adjust realistically the maximum gain
+* supports full exposure (use the order max size) or fixed stake
+* log the opportunities found in DB and display statistics
+* simulate the transactions based on the existing funds in the wallets and track them to get a P/L balance
+* wallets portfolio from all the exchange markets
+* initialize the wallets based on previous opportunities found
+* balance the funds between markets automatically 
+* simulate basic trading operations (buy, sell, deposit, withdraw)
 
 
 ## Disclaimer
@@ -53,8 +61,6 @@ Optionally, install the cron to run the arbitrage bot in the background:
     * * * * * php /path/to/project/artisan schedule:run >> /dev/null 2>&1
 
 
-## How it works
-
 
 
 ## Basic Usage
@@ -87,11 +93,4 @@ Wallet management:
 
 Feel free to contribute, but please discuss the feature in a issue or contact me before a PR 
     
-
-### TODO
-
-
-* use Money library & swap instead of bcmath
-    https://github.com/moneyphp/money
-
 
