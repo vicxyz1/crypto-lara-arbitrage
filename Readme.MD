@@ -8,7 +8,8 @@ Implements basic arbitrage algorithm between crypto exchange markets,  currently
 
 ## Features
 
-* support for multiple crypto exchange platforms
+* support for multiple crypto exchange markets
+* minimum profit to take as opportunity deducting the market fees
 * check the ask / bid size in orderbook  to adjust realistically the maximum gain
 * supports full exposure (use the order max size) or fixed stake
 * log the opportunities found in DB and display statistics
