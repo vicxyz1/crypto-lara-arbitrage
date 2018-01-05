@@ -18,13 +18,16 @@ Implements basic arbitrage algorithm between crypto exchanges platforms. Current
 * simulate basic trading operations (buy, sell, deposit, withdraw)
 
 
+![arbitrage:run](docs/arbitrage_run.jpg)
+
+
 ## Disclaimer
    
    This software is for educational purposes only, _right now it's just a simulator, meaning no real money involved_. 
    
   __Anyway, as a general rule if you decide to follow the opportunities, DO NOT risk money which you are afraid to lose.__ USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
 
-## INSTALATION
+## Instalation
 
 Download or clone the repository:
 
@@ -73,8 +76,10 @@ Run the arbitrage bot:
 Display arbitrage statistics:
 
     ./artisan arbitrage:stats 
+    
+![arbitrage:run](docs/arbitrage_stats.jpg)
 
-Wallet management:
+__Wallet management__
 
    - Display all the wallets with a positive balance and the total value in BTC/USD
     
@@ -88,6 +93,9 @@ Wallet management:
    
     ./artisan wallet:balance
     
+Each command supports additional option, please check them withȘ   
+    
+    ./artisan help {command}
 
 ## Contributing
 
