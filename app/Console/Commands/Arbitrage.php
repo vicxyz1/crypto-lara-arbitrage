@@ -70,7 +70,7 @@ class Arbitrage extends Command
      */
     public function handle()
     {
-        $markets = Market::all()->pluck('name');
+        $markets = Market::where('active', true)->pluck('name');
 
         $CACHE = $this->option('cache');
 
