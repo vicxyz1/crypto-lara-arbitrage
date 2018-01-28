@@ -77,7 +77,7 @@ class Bittrex extends Market
         ]);
 
         //!TODO: to match the rate
-        if (!$orderbook || !is_array($orderbook->buy)) {
+        if (!$orderbook || !count($orderbook->buy)) {
             return false;
         }
 
