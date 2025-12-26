@@ -1,9 +1,28 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\History::class, function (Faker $faker) {
-    return [
-        //
-    ];
-});
+use App\History;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class HistoryFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = History::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            //
+        ];
+    }
+}
